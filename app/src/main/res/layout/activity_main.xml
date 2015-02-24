@@ -1,0 +1,179 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp" tools:context=".MainActivity"
+    android:id="@+id/mLayout">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:layout_above="@+id/bottomMenu"
+            >
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.MapFragment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentTop="true"
+                    />
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="0.4"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    >
+
+
+                    <LinearLayout
+                        android:id="@+id/detailsView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        >
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="0dp"
+                            android:padding="0dp"
+                            android:background="@drawable/details_icon"
+                            >
+
+                            <ImageButton
+                                android:id="@+id/detailsViewBack"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:text="@string/settings_button"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/details_icon"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_back"/>
+
+                            <TextView
+                                android:id="@+id/label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:gravity="center"
+                                android:text="Address"
+                                android:textSize="20sp"
+                                android:focusable="false">
+                            </TextView>
+                            <TextView
+                                android:id="@+id/distance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:gravity="center"
+                                android:text="distance"
+                                android:textSize="16sp"
+                                android:layout_marginLeft="5sp"
+                                android:focusable="false">
+                            </TextView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="0dp"
+                            android:padding="10dp"
+                            android:paddingTop="0dp"
+                            android:paddingBottom="0dp"
+                            >
+
+                            <RatingBar
+                                android:id="@+id/ratingBar"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:numStars="5"
+                                android:stepSize=".5"
+                                android:rating=".0" />
+
+
+                            <ImageButton
+                                android:id="@+id/detailsImageButton"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/details_icon"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_camera"/>
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/pulpulakList"
+                        android:scrollbars="none"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_centerHorizontal="true"
+                        android:divider="@android:color/transparent"
+                        android:dividerHeight="10.0sp"
+                        />
+
+                </LinearLayout>
+
+        </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/bottomMenu"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/toolbar_color"
+        android:gravity="center"
+        >
+
+        <ImageButton
+            android:id="@+id/settingsButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="@string/settings_button"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/toolbar_icon"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_settings"/>
+
+        <ImageButton
+            android:id="@+id/addButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/toolbar_icon"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_add" />
+
+        <ImageButton
+            android:id="@+id/refreshButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="@string/refresh_button"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/toolbar_icon"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_refresh"/>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
