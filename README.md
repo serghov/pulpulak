@@ -1,5 +1,10 @@
-PULPULAK
+#PULPULAK
 
-An app to help locating pulpulaks.
+This was a way to get over boredom, so it contains a lot of bugs and is not nearly finished.
+Pulpulak was supposed to be an app that would help people locate nearest drinking fountains.
 
-At this moment the app works only for android and is not finished.
+## To Do
+* server to store dynamically added locatiosn
+* ratings and comments
+* android 6.0 permission support
+* everything else
